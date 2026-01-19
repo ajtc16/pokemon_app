@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(if exist src rmdir /s /q src)",
+      "Bash(if exist vite.config.js del /q vite.config.js)",
+      "Bash(if exist index.html del /q index.html)",
+      "Bash(if exist eslint.config.js del /q eslint.config.js)",
+      "Bash(npm install:*)",
+      "Bash(npm run dev:*)"
+    ]
+  }
+}

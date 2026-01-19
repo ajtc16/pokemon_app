@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-grayscale-background text-grayscale-dark;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer utilities {
+  /* Pokemon type badge styles */
+  .type-badge {
+    @apply inline-flex items-center justify-center rounded-full px-2 py-0.5 font-poppins text-body-3 font-semibold text-white;
+  }
+
+  /* Stat bar animation */
+  .stat-bar {
+    @apply relative h-1 overflow-hidden rounded-full bg-grayscale-light;
+  }
+
+  .stat-bar-fill {
+    @apply absolute left-0 top-0 h-full rounded-full transition-all duration-500;
+  }
+
+  /* Card hover effect */
+  .card-hover {
+    @apply transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-drop-shadow-6dp;
+  }
+
+  /* Focus visible styles */
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pokemon-red focus-visible:ring-offset-2;
+  }
+}
