@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bundle install:*)",
+      "Bash(bin/rails db:prepare:*)",
+      "Bash(bin/rails server:*)",
+      "Bash(timeout:*)",
+      "Bash(curl:*)",
+      "Bash(powershell -Command \"Start-Sleep -Seconds 5; Invoke-WebRequest -Uri http://localhost:3000/up -UseBasicParsing | Select-Object -ExpandProperty StatusCode\")",
+      "Bash(ruby bin/rails server:*)",
+      "Bash(powershell -Command \"Start-Sleep -Seconds 8; Invoke-WebRequest -Uri http://localhost:3000/up -UseBasicParsing | Select-Object -ExpandProperty StatusCode\")",
+      "Bash(if exist tmprestart.txt del tmprestart.txt)",
+      "Bash(if exist tmpcaching-dev.txt del tmpcaching-dev.txt)",
+      "Bash(powershell -Command:*)",
+      "Bash(ruby bin/rails test:*)",
+      "Bash(ruby bin/rails:*)"
+    ]
+  }
+}
